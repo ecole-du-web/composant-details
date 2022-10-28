@@ -1,0 +1,46 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+details, summary {
+    max-width: 500px;
+}
+details {
+    background: #f6f6f6;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 100px auto 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+summary {
+    user-select: none;
+    padding: 25px;
+    font-size: 22px;
+}
+details p {
+    line-height: 1.5;
+    padding: 0px 25px 25px;
+    cursor: auto;
+}
+
+
+/* Animer et styliser le twist */
+
+summary {list-style: none} 
+
+details summary::before { 
+  content:"🥭"; 
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.4s ease-out;
+}
+
+details[open] summary::before {
+    transform: rotate(360deg);
+}
+
